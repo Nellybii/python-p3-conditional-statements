@@ -1,17 +1,51 @@
 #!/usr/bin/env python3
 
 def admin_login(username, password):
-    # your code here
-    pass
+    if username.upper() == "ADMIN" and password == "12345":
+        return "Access granted"
+    else:
+        return "Access denied"
+
+result = admin_login("admin", "12345")
+print(result)
 
 def hows_the_weather(temperature):
-    # your code here
-    pass
+    if temperature < 40:
+        return "It's brisk out there!"
+    elif 40 <= temperature < 65:
+        return "It's a little chilly out there!"
+    elif temperature > 85:
+        return "It's too dang hot out there!"
+    else:
+        return "It's perfect out there!"
+print(hows_the_weather(100))
 
 def fizzbuzz(num):
-    # your code here
-    pass
+    if num % 3 == 0 and num % 5 == 0:
+        return "FizzBuzz"
+    elif num % 3 == 0:
+        return "Fizz"
+    elif num % 5 == 0:
+        return "Buzz"
+    else:
+        return num
+
+fizzbuzz_result = fizzbuzz(50)
+print(fizzbuzz_result)
 
 def calculator(operation, num1, num2):
+    if operation == "+":
+        return num1 + num2
+    elif operation == "-":
+        return num1 - num2
+    elif operation == "*":
+        return num1 * num2
+    elif operation == "/":
+        return num1 / num2
+    else: 
+        print("Invalid operation!")
+        return ("None")
     # your code here
     pass
+result = calculator("none", 8, 9)
+print(result)
